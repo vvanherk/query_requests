@@ -1,0 +1,10 @@
+select distinct policynumber,jobnumber,job.createtime,uwissuedesc.value "UW Issue Desc",  uwreferralreasondesc.value as "Referral Reason Desc", languagetype.name as "Language" from pcuser.pc_uwissue uwissue
+  inner join pcuser.pc_uw_issue_sdesc uwissuedesc on uwissuedesc.owner=uwissue.id
+  inner join pcuser.pc_policyperiod policyperiod on policyperiod.id=uwissue.branchid
+  inner join pcuser.pc_job job on job.id=policyperiod.jobid
+  inner join pcuser.pc_uwreferralreason uwreferralreason on uwreferralreason.policy=policyperiod.policyid
+  left join pcuser.pc_uw_ref_sdesc uwreferralreasondesc on uwreferralreasondesc.owner=uwreferralreason.id
+  left join PCUSER.pctl_languagetype languagetype on languagetype.id=uwreferralreasondesc.language
+where uwissuedesc.value='Referral Reason : null' and uwissue.basedonid is null and uwissue.issuetypeid=31
+
+order by job.createtime ;

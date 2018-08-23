@@ -1,0 +1,22 @@
+[FADDINTCANCP - 01/2000 [FADDINTCANCB], FADDINTREML - 01/2000 [FADDINTREMLCB], MortNoteCancelJob - 01/2000 [MortgageeNotCancelJob], MortLetterCancelJob - 01/2000 [MortgageeLetterCancelJob], MortNotetSubCondoCancJob - 01/2000 [MortgageeNotSubCondoCancJob], FCANC406 - 01/2000 [FCANC406B], MortNoticeRescind - 01/2000 [MortgageeNotRescind], MortNoteCancelJob - 01/2000 [MortgageeNotCancelJobStructure], FADDINTCANCP - 01/2000 [FADDINTCANC], MortNoticeRescind - 01/2000 [MortgageeNotRescindStructure], FADDINTREML - 01/2000 [FADDINTREMLC], FCANC406 - 01/2000 [FCANC406Structure], MortNotetRescindCondo - 01/2000 [MortgageeNotRescindCondo], FCANC406 - 01/2000 [FCANC406]]
+[FADDINT113 - 01/2000 [FADDINT113], FADDINTCANCP - 01/2000 [FADDINTCANCB], FADDINTREML - 01/2000 [FADDINTREMLCB], MortNoteCancelJob - 01/2000 [MortgageeNotCancelJob], MortLetterCancelJob - 01/2000 [MortgageeLetterCancelJob], MortNotetSubCondoCancJob - 01/2000 [MortgageeNotSubCondoCancJob], FCANC406 - 01/2000 [FCANC406B], CANC700 - 09/2012 [CANC700], MortNoticeRescind - 01/2000 [MortgageeNotRescind], MortNoteCancelJob - 01/2000 [MortgageeNotCancelJobStructure], CoopControlFormCancel - 01/2000 [CoopControlFormCancel], CancellationNotice - 01/2000 [CancellationNotice], FADDINTCANCP - 01/2000 [FADDINTCANC], MortNoticeRescind - 01/2000 [MortgageeNotRescindStructure], FADDINTREML - 01/2000 [FADDINTREMLC], FCANC406 - 01/2000 [FCANC406Structure], Rescind - 01/2000 [Rescind], MortNotetRescindCondo - 01/2000 [MortgageeNotRescindCondo], FCANC406 - 01/2000 [FCANC406], CANC701 - 09/2012 [CANC701]]
+
+4181500574 
+
+        } else if (period.Status == PolicyPeriodStatus.TC_RESCINDED) {
+            if (form?.Pattern?.Code == "FADDINT113") { //FADDINT113 is LeaseHolder type
+              aiTypeCode = "LeaseHolder"
+            }
+            subTransaction = "Rescinded"
+
+			
+No Results Returned for ProductCode:Farm_CG, BMC:cgic, TransactionType:Cancellation, CancellationSource:billingcenter, Reason:null, RecipientType:AI, aiTypeCode:LeaseHolder, SubTransaction:Rescinded*gw.api.util.DisplayableException: No Results Returned fo
+			
+type,'data-set',entityid,ProductCode_CG,BusinessMarketContext_CG,TransactionType_CG,Source_CG,Reason,RecipientType_CG,AdditionalInterestType_CG,SubTransaction_CG,DocumentCode_CG,ImportVersion_CG,Enablement,DocumentType_CG,BillType_CG,RenewalIndicator_CG,RiskTypeIndicator_CG,ClaimsIndicator_CG,SendDocument_CG,ReasonDescription_CG,ProgramHandled_CG,RegisteredMail_CG,Notes_CG,CancelReasonCode_CG,NonRenewalExplanation_CG,AdditionalInterestType,Province_CG
+
+
+lease match
+  (DocProdDocumentCodes_CG) {ID=650, BeanVersion=0, AdditionalInterestType=null, AdditionalInterestType_CG=LeaseHolder, BillType_CG=null, BusinessMarketContext_CG=CGIC, CancelReasonCode_CG=null, ClaimsIndicator_CG=n, CreateTime=Thu Apr 09 15:29:58 EDT 2015, CreateUser=3, DocumentCode_CG=FADDINT113, DocumentType_CG=LETTER, Enablement=-, ImportVersion_CG=v20121030.0945, LoadCommandID=null, NonRenewalExplanation_CG=null, Notes_CG=null, ProductCode_CG=Farm_CG, ProgramHandled_CG=false, Province_CG=null, PublicID=FARM:2030, Reason=null, ReasonDescription_CG=null, RecipientType_CG=Additional Interest, RegisteredMail_CG=false, RenewalIndicator_CG=n, RetiredValue=0, RiskTypeIndicator_CG=y, SendDocument_CG=y, Source_CG=null, SubTransaction_CG=null, TransactionType_CG=Reinstatement, UpdateTime=Thu Apr 09 15:29:58 EDT 2015, UpdateUser=3}
+
+power mismatch - got fmort100cg
+  (DocProdDocumentCodes_CG) {ID=177, BeanVersion=1, AdditionalInterestType=null, AdditionalInterestType_CG=Mortgagee, BillType_CG=null, BusinessMarketContext_CG=CGIC, CancelReasonCode_CG=null, ClaimsIndicator_CG=n, CreateTime=Thu Apr 09 15:29:58 EDT 2015, CreateUser=3, DocumentCode_CG=FMORT100CG, DocumentType_CG=NOTICE, Enablement=-, ImportVersion_CG=v20121030.0945, LoadCommandID=null, NonRenewalExplanation_CG=null, Notes_CG=null, ProductCode_CG=Farm_CG, ProgramHandled_CG=false, Province_CG=null, PublicID=FARM:176, Reason=null, ReasonDescription_CG=null, RecipientType_CG=Additional Interest, RegisteredMail_CG=false, RenewalIndicator_CG=n, RetiredValue=0, RiskTypeIndicator_CG=n, SendDocument_CG=y, Source_CG=BillingCenter, SubTransaction_CG=Rescinded, TransactionType_CG=Cancellation, UpdateTime=Fri May 13 19:58:15 EDT 2016, UpdateUser=3}
